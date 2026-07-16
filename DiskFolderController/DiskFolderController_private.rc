@@ -1,0 +1,43 @@
+/* THIS FILE WILL BE OVERWRITTEN BY Red Panda C++ */
+/* DO NOT EDIT! */
+
+#include <windows.h> // include for version info constants
+
+
+A ICON "app.ico"
+
+//
+// SUPPORT FOR WINDOWS XP THEMES:
+// THIS WILL MAKE THE PROGRAM USE THE COMMON CONTROLS
+// LIBRARY VERSION 6.0 (IF IT IS AVAILABLE)
+//
+1 24 "DiskFolderController.exe.Manifest"
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 1,0,1,8
+PRODUCTVERSION 1,0,1,8
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "080404e4"
+    {
+      VALUE "CompanyName", "FrankWkd"
+      VALUE "FileVersion", "1.0.1.8"
+      VALUE "FileDescription", "Developed using the Red Panda C++ IDE"
+      VALUE "InternalName", "HiceController"
+      VALUE "LegalCopyright", "FrankWkd"
+      VALUE "LegalTrademarks", "FrankWkd"
+      VALUE "OriginalFilename", "DiskFolderController.exe"
+      VALUE "ProductName", "DiskFolderHideController"
+      VALUE "ProductVersion", "1.0.1.8"
+    }
+  }
+  BLOCK "VarFileInfo"
+  {
+    VALUE "Translation", 0x0804, 1252
+  }
+}

@@ -1,0 +1,37 @@
+# Project: WebDDoS
+# Makefile created by Red Panda C++ 3.2.2958
+
+CXX      = "g++.exe"
+CC       = "gcc.exe"
+WINDRES  = "windres.exe"
+RM       = del /q /f
+CD       = cd /d
+LIBS     = "-Wl,--stack,12582912" "-s" "-static"
+INCS     = 
+CXXINCS  = 
+CXXFLAGS = $(CXXINCS) "-Ofast" "-pipe" "-lwininet"
+CFLAGS   = $(INCS) "-Ofast" "-pipe" "-lwininet"
+WINDRESFLAGS = 
+RES      = WebDDoS_private.res
+OBJ      = main.o $(RES)
+BIN      = WebDDoS.exe
+LINKOBJ  = "main.o" "WebDDoS_private.res"
+CLEANOBJ = "main.o" "WebDDoS_private.res" "WebDDoS.exe"
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	-$(RM) $(CLEANOBJ) >NUL 2>&1
+
+WebDDoS.exe: $(OBJ)
+
+	$(CXX) $(LINKOBJ) -o "WebDDoS.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CXX) -c "main.cpp" -o "main.o" $(CXXFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+WebDDoS_private.res: WebDDoS_private.rc 
+	$(WINDRES) -i "WebDDoS_private.rc" --input-format=rc -o "WebDDoS_private.res" -O coff $(WINDRESFLAGS) 
+
